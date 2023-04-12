@@ -1,0 +1,44 @@
+header{
+    background-color: #1b1464;
+    color: white;
+    min-height: 70px;
+    padding-top: 30px;
+}
+
+.navlink{
+    float: right;
+    margin-right: 35px;
+    margin-right: 20px;
+
+}
+header li{
+    display: inline;
+    padding: 0px 20px;
+
+    font-size: 24px;
+}
+
+header a{
+    text-decoration: none;
+    color : white;
+}
+
+#logo {           
+    color: yellow;
+}
+
+#reg_form{
+    width: 80% ;
+    padding: 15px;
+    margin: 20px;
+}
+
+#reg_form input {
+    width:80%;
+    padding: 15px;
+    margin: 20px;
+}
+
+.regdiv{
+    text-align: center;
+}

@@ -17,29 +17,23 @@
                      <li class='navlink'>{{user.name}}</li>
                     {% else %}
                      <li class="navlink">Login</li>
-                     <li class="navlink"><a href="{% url 'register'%}">Register</a></li>
+                     <li class="navlink">Register</li>
                     {% endif %}
                     <li class="navlink">About</li>
                     <li class="navlink">Home</li>
                 </ul>
             </nav>
         </header>
-        
-        <h1>{{ username }} Welcome to the {{ pr_title }}.</h1>
-        {% if gender == 'Male' %} 
-         <p>Greetings Sir.</p>
-        {% else %}
-         <P>Greetings madame.</P>
-        {% endif %}
-        {% if username == 'Olive' %}
-         <p>Hi Olive.</p>
-        {% elif username == 'Mariam' %}
-         <p>Hi Mariam.</p>
-        {% endif %}
+        <div class = "regdiv">
+            <form action="" id="reg_form">
+                <input placeholder = "Username" name="username" type="text">
+                <input placeholder="Email" name="email" type="email">
+                <input placeholder="Password" name="password" type="password">
+                <input placeholder="Confirm Password" required="password">  
+                <input type="submit"> 
+            </form>
+
+        </div>
         <footer></footer>
     </body>
 </html>
-
-
-
-
