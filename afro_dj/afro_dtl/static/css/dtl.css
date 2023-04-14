@@ -1,5 +1,5 @@
 header{
-    background-color: #1b1464;
+    background-color:palevioletred;
     color: white;
     min-height: 70px;
     padding-top: 30px;
@@ -26,7 +26,7 @@ header a{
 }
 
 #logo {
-    color: yellow;
+    color: white;
 }
 .regdiv{
     width: 80%;
@@ -71,8 +71,8 @@ header a{
 
 .button1:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19) ;
-    color: white;
-    background-color: aqua;
+    color:bisque;
+    background-color:palevioletred;
     font-size: 16px;
 }
 #signupbtn{
