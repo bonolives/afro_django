@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
+from django.contrib.auth.decorators import login_required
 from .models import User_account
 from django.contrib.auth.models import User
 
@@ -7,13 +8,13 @@ from django.contrib.auth.models import User
 def index(request):
     pr_title = 'Afro-Django'
     
-    if request.user.is_athenticated:
+    if request.user.is_authenticated:
         username = request.user.username 
         
         return render(
         request, 
         'index.html', 
-        {'pr_title': pr_title, 'username':username,}
+        {'pr_title': pr_title, 'username':username}
         )
     
     else:
@@ -31,11 +32,11 @@ def register(request):
 
 def registration(request):
     user_name = request.POST['username']
-    email = request.POST['email']
+    email = request.POST['user_email']
     password = request.POST['password']
     gender = request.POST['gender']
     user_details=[
-            user_name,email,password,gender
+            user_name, email,password,gender
         ]
     print(user_details)
     if User.objects.filter(username=user_name).first():
@@ -66,6 +67,12 @@ def login_user(request):
     
 def login_page(request):
     return render(request, 'login.html')
+
+
+@login_required
+def logout_user(request):
+    auth_logout(request)
+    return redirect('login_page')
 
     
    

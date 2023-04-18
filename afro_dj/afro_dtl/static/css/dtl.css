@@ -82,7 +82,7 @@ footer{
     bottom: 0px;
     left: 0px;
     position:relative;
-    background-color: aliceblue;
+    background-color: palevioletred;
     height: 50px;
     width: 100%;
     padding: 2px;
@@ -96,5 +96,5 @@ footer{
 }
 #close_btn{
     color: white;
-    background-color: red;
+    background-color: palevioletred
 }
