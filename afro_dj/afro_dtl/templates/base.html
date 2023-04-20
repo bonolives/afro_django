@@ -16,11 +16,11 @@
                     <li id='logo'>{{ pr_title }}</li>
                     {% if user.is_authenticated %}
                       <li class="navlink"><a href="{% url 'logout_user' %}"> Logout</a></li>
-                      <li class='navlink'></li>
-                      <li class="navlink"><a href="{% url 'index' %}"> About</a></li>
+                      <li class="navlink"><a href="{% url 'about' %}"> About</a></li> 
                       <li class="navlink"><a href="{% url 'index' %}"> Home</a></li>
                     {% else %}
                      <li class="navlink"><a href="{% url 'login_page' %}">Login</a></li>
+                 
                      <li class="navlink"><a href="{% url 'register' %}">Register</a></li>
                     {% endif %}
                 </ul>

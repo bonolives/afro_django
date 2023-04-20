@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+    <h1>My Custom About Page.</h1>
+   
+    <form action="{% url 'about_form' %}" id="about_form" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="container">
+
+            <select name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <br>
+            <input placeholder="Username" name="username" type="text" required>
+            <br> 
+            <input placeholder="Email" name="user_email" type="email" required> 
+            <br>
+            <input placeholder="University" name="user_university" type="text" required>
+            <br> 
+            <input placeholder="Course" name="user_course" type="text" required>
+            <br> 
+            <input placeholder="Cohort" name="user_cohort" type="text" required>
+            <br> 
+            <input type="submit" class="button1" title="about" id="aboutbtn">
+            
+        </div>
+    </form>
+    <br><br>
+{% endblock%}
+

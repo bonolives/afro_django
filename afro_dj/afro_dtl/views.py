@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.contrib.auth.decorators import login_required
-from .models import User_account
+from .models import User_account, About_form
 from django.contrib.auth.models import User
 
 # Create your views here.
@@ -74,6 +74,21 @@ def logout_user(request):
     auth_logout(request)
     return redirect('login_page')
 
+def about_form(request):
     
-   
+    user_name = request.POST['username']
+    email = request.POST['user_email']
+    gender = request.POST['gender']
+    university = request.POST['user_university']
+    course = request.POST['user_course']
+    cohort = request.POST['user_cohort']
+
+    user_details=[user_name,email,gender,university,course,cohort] 
+    
+    return render(request, 'display.html', {'user_details':user_details,})
+
+def about(request):
+    return render(request, 'about.html')
+
+
 
